@@ -12,8 +12,18 @@
 Electron desktop application on Linux. `nur.repos.chen.papilot-cli` omits the
 Electron launcher and also supports Apple Silicon macOS.
 
+With the NUR overlay configured in NixOS:
+
 ```nix
-environment.systemPackages = [ nur.repos.chen.papilot ];
+environment.systemPackages = [ pkgs.nur.repos.chen.papilot ];
+```
+
+The repository's flake can also be installed directly:
+
+```sh
+nix profile install github:cu1ch3n/nur-packages#papilot
+# CLI only (also available on Apple Silicon macOS):
+nix profile install github:cu1ch3n/nur-packages#papilot-cli
 ```
 
 Run `papilot` for the browser interface, `papilot-desktop` for the Linux desktop,
